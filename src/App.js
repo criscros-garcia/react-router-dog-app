@@ -5,6 +5,7 @@ import hazel from './images/hazel.jpg';
 import tubby from './images/tubby.jpg';
 import { Component } from 'react';
 import { Switch, Route, Link } from "react-router-dom";
+import DogList from './DogList';
 
 class App extends Component{
   static defaultProps = {
@@ -44,7 +45,7 @@ class App extends Component{
   render(){
     return (
       <Switch>
-        <Route exact path="/dogs"><h1>List of dogs</h1></Route>
+        <Route exact path="/dogs"> <DogList dogs={this.props.dogs}/> </Route>
       </Switch>
     );
 
