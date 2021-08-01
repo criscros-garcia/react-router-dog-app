@@ -4,6 +4,7 @@ import whiskey from './images/whiskey.jpg';
 import hazel from './images/hazel.jpg';
 import tubby from './images/tubby.jpg';
 import { Component } from 'react';
+import { Switch, Route, Link } from "react-router-dom";
 
 class App extends Component{
   static defaultProps = {
@@ -42,9 +43,9 @@ class App extends Component{
   }
   render(){
     return (
-      <div className="App">
-        <h1>React Router dog finder!</h1>
-      </div>
+      <Switch>
+        <Route exact path="/dogs"><h1>List of dogs</h1></Route>
+      </Switch>
     );
 
   }
