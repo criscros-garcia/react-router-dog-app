@@ -13,7 +13,9 @@ render(){
           <div className='Dog col-lg-4 text-center'>
             <img src={d.src} alt={d.name}/>
             <h3 className='mt-3'>
-            <Link className='underline' to={`/dogs/${d.name}`} > {d.name} </Link >
+            <Link className='underline' to={`/dogs/${d.name}`} > 
+              {d.name} 
+            </Link >
             </h3>
           </div>
       ))
