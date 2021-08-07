@@ -6,8 +6,11 @@ import tubby from './images/tubby.jpg';
 import { Component } from 'react';
 import { Switch, Route, Link } from "react-router-dom";
 import DogList from './DogList';
+import DogDetails from './DogDetails';
+import Navbar from './Navbar';
 
 class App extends Component{
+  
   static defaultProps = {
     dogs: [
       {
@@ -27,7 +30,7 @@ class App extends Component{
         facts: [
           "Hazel has soooo much energy!",
           "Hazel is highly intelligent.",
-          "Hazel loves people more than dogs."
+          "Hazel loves people more than dogs."          
         ]
       },
       {
@@ -43,10 +46,22 @@ class App extends Component{
     ]
   }
   render(){
+    const getDog = props => {
+      let name= props.match.params.name;
+      let currentDog = this.props.dogs.find(
+        dog => dog.name.toLowerCase() === name.toLowerCase()
+      );
+      return <DogDetails {...props} dog={currentDog} />
+    }
     return (
+      <div>
+      <Navbar dogs={this.props.dogs}/>
       <Switch>
         <Route exact path="/dogs"> <DogList dogs={this.props.dogs}/> </Route>
+        <Route exact path="/dogs/:name" render={getDog}/> 
       </Switch>
+
+      </div>
     );
 
   }
