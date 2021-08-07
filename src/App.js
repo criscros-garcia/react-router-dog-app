@@ -1,10 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
 import whiskey from './images/whiskey.jpg';
 import hazel from './images/hazel.jpg';
 import tubby from './images/tubby.jpg';
 import { Component } from 'react';
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import DogList from './DogList';
 import DogDetails from './DogDetails';
 import Navbar from './Navbar';

@@ -7,11 +7,11 @@ class Navbar extends Component{
       <nav>
         <ul>
         {this.props.dogs.map(d =>(
-        <li>
-          <Link to={`/dogs/${d.name}`}>
+        // <li>
+          <Link to={`/dogs/${d.name}`}key={d.name}>
             {d.name}
           </Link>
-        </li>
+        //  </li> 
         ))}
         </ul>
       </nav>
