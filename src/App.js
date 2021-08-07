@@ -1,9 +1,9 @@
+import { Component } from 'react';
+import Routes from './Routes';
+import Mynavbar from './Mynavbar';
 import whiskey from './images/whiskey.jpg';
 import hazel from './images/hazel.jpg';
 import tubby from './images/tubby.jpg';
-import { Component } from 'react';
-import Routes from './Routes';
-import Navbar from './Navbar';
 
 class App extends Component{
   
@@ -44,7 +44,7 @@ class App extends Component{
   render(){
     return (
       <div>
-      <Navbar dogs={this.props.dogs}/>
+      <Mynavbar dogs={this.props.dogs}/>
         <div className='container'>
           <Routes dogs={this.props.dogs}/>
         </div>

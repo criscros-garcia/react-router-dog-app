@@ -6,7 +6,7 @@ class DogDetails extends Component{
   render(){
     let { dog } = this.props;
     return(
-      <div className='DogDetails row justify-content-center'>
+      <div className='DogDetails row justify-content-center mt-5'>
         <div className='col-11 col-lg-5'>
           <Card className="DogDetails-card">
             
